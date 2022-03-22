@@ -48,8 +48,13 @@ export default function Signup() {
           "data:text/plain;charset=utf-8," +
             encodeURIComponent(JSON.stringify(values))
         );
-        element.setAttribute("download", `${values.firstName}${values.email}.txt`);
+        element.setAttribute(
+          "download",
+          `${values.firstName}${values.email}.txt`
+        );
         element.click();
+        alert("Data saved");
+        resetForm();
       }
     },
   });
